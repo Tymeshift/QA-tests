@@ -1,5 +1,5 @@
 /**
- * Created by Sujith Alla on 3/30/2016.
+ *
  */
 
 
@@ -109,7 +109,7 @@ var LoginCtrl=function($scope,dataservice)
         {
             if ((el.Email==$scope.Email)&&(el.Password==$scope.Password))
             {
-                window.location.href="Register.html"
+                window.location.href="index.html"
               redrct=true;
             }
 

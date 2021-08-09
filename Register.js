@@ -1,5 +1,5 @@
 /**
- * Created by Sujith Alla on 4/22/2016.
+ *
  */
 
 $(document).ready(function()

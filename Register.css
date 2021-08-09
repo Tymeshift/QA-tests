@@ -1,0 +1,403 @@
+
+h1
+{
+font-size: 36px!important;
+    color: #02569c !important;
+
+}
+
+.navbar-nav>li
+{
+    margin-left: 30px;
+
+}
+
+.navbar-inverse
+{
+
+    border: none;
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #4caeea;
+    padding: 0px;
+    padding-bottom: 0;
+    background-color: #4caeea  !important;
+}
+
+.navbar-nav > li > a
+{
+    color: #fff !important;
+
+}
+
+
+@media (max-width: 1200px ) and (min-width:768px)
+{
+.navbar-nav>li
+{
+    margin-left: 0;
+
+}
+}
+
+@media (min-width: 700px ) and (max-width: 991px)
+{
+    .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    padding: 5px 12px;
+    margin: 0;
+    border-radius: 0px;
+    color: #fff;
+    line-height: 24px;
+     display: inline-block;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > li > a:hover
+{
+ background-color: #00579a !important;
+    color: #fff;
+}
+
+.navbar-nav>.active>a
+{
+    background-color: #00579a !important;
+}
+
+
+#footer
+{
+    position: relative !important;
+    top: 10px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+     background: #2e2e2e;
+
+}
+
+
+
+
+#footer a {
+    color: #fff;
+}
+
+#footer a:hover {
+    color: #fff;
+}
+
+#footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer ul > li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+
+
+
+.social .link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px dashed white;
+    background-clip: content-box;
+    padding: 5px;
+    transition: .5s;
+    color: #D7D0BE;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow:
+            0 -1px 0 rgba(0, 0, 0, 0.2),
+            0 1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+}
+
+.social .link span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social .link:hover {
+    padding: 5px;
+    color: white;
+    transform: rotate(360deg);
+}
+
+.social .link.google-plus {
+    background-color: tomato;
+    color: white;
+}
+
+.social .link.twitter {
+    background-color: #00ACEE;
+    color: white;
+}
+
+.social .link.facebook {
+    background-color: #3B5998;
+    color: white;
+}
+.social .link.linkedin {
+    background-color: #0177b5;
+    color: white;
+}
+
+
+
+
+@media(max-width:700px) and (min-width:440px )
+{
+    #footer .col-sm-6{
+        text-align:center;
+    }
+
+    #footer .pull-right{
+        float: none !important;
+    }
+
+    ul.social_icons li{
+        margin-right: 0;
+    }
+
+
+}
+
+
+
+@media (min-width: 767px){
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        padding: 0px !important;
+
+    }
+
+}
+.navbar-inverse .navbar-nav .dropdown-menu > li > a {
+    padding: 8px 15px;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
+.navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
+.navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
+    background-color: #00579a;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu {
+    background-color: rgba(101,183,234,.85);
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+    border: 0;
+    padding: 0;
+    margin-top: 0;
+    border-top: 0;
+    border-radius: 0;
+    left: 0;
+}
+
+
+.center
+{
+    text-align: center;
+
+}
+
+label
+{
+    margin-bottom: 0px !important;
+}
+
+::-webkit-input-placeholder
+{
+    text-align: center !important;
+    font-size: 14px !important;
+    color: #00ACEE !important;
+
+}
+
+::-moz-placeholder
+{
+
+    text-align:center !important;
+    font-size: 14px !important;
+    color: #00ACEE !important;
+
+}
+
+.form-group .form-control {
+     padding: 7px 12px;
+     border-color:#555;
+     box-shadow: none !important;
+    outline: none !important;
+}
+
+.form-control:focus {
+    box-shadow:none !important;
+     outline: 0 none !important;
+    border-color:#555 !important;
+}
+
+
+
+@media (max-width: 440px)
+{
+
+    #footer .col-sm-6{
+        text-align:center;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #footer .pull-right{
+        float: none !important;
+    }
+
+    ul.social_icons li{
+        margin-right: 0;
+    }
+
+}
+
+@-moz-document url-prefix(http), url-prefix(file) {
+    img:-moz-broken{
+
+        display: inline-block;
+        width:100px;
+        height:100px;
+    }
+}
+
+.gridStyle {
+ /*   border: 1px solid rgb(212,212,212);*/
+    width: 400px;
+    height: 800px
+}
+
+.ngHeaderCell {
+    background-color: white !important;
+
+    color: black !important;
+
+
+}
+
+@media (max-width: 1239px)
+{
+
+    .navbar-inverse .navbar-nav > li > a
+    {
+        padding: 5px 5px !important;
+    }
+
+}
+
+.contexthde
+{
+    display:none;
+    position:absolute;
+    margin-top: -5px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    z-index: 999999 !important;
+}
+
+
+.contextshw
+{
+  position:absolute;
+    margin-top: -5px;
+    display: inline;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    z-index: 999999 !important;
+}
+ .contextshw ul li
+ {
+     list-style: none;
+     margin: 5px;
+ }
+
+ .dropdown-menu > li:hover > ul{
+    position:absolute;
+     left:100% !important;
+    top: -2px;
+     background-color: rgba(101,183,234,.85) !important;
+     display:inline-block;
+}
+
+.dropdown-menu > li:hover > ul >li > a:hover{
+    text-decoration: none;
+}
+
+.dropdown-menu > li:hover > ul >li:hover{
+    background-color: #00579a;
+    color: #fff;
+}
+
+.dropdown-menu > li:hover > ul >li > a{
+    font-weight: 400;
+    padding: 8px 15px;
+}
+
+.dropdown-menu > li:hover > ul >li{
+    padding: 8px 15px;
+}
+
+ .childmenu{
+     display: none;
+     list-style: none;
+     padding-left: 0px !important;
+     margin-top: 10px;
+ }
+
+#eid:hover + .tooltptext
+{
+   display: block;
+    Z-index:99999999 !important;
+    position:relative;
+    top:10%;
+    font-size: 12px;
+    border: 1px solid;
+  background-color: ghostwhite;
+}
+
+.tooltptext
+{
+display:none;
+}
+
+
+/*external page css*/
+.cont_box{
+    max-width: 500px;
+    margin: 0 auto;
+}
+/*external page css*/
+

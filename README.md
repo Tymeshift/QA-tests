@@ -70,3 +70,5 @@ To be done:
  1. Add iframe on elements
  2. Add popup on submit button click with "Success registration" message
  3. Fix image upload
+ 4. Create issues
+ 5. Create a document with practical assessment information for the candidate

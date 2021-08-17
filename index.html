@@ -68,10 +68,10 @@
     <div class="top">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 col-xs-3 col-md-2 "><a href="http://www.automationtesting.in" class="navbar-brand">
+                <div class="col-sm-3 col-xs-3 col-md-2 "><a href="index.html" class="navbar-brand">
                     <img src="original.png" alt="image not displaying" style="height: 50px"> </a></div>
                 <div class="col-sm-8 col-xs-8 col-md-8" align="center">
-                    <h1>Automation Demo Site </h1>
+                    <h1> Practical QA test </h1>
                 </div>
             </div>
         </div>
@@ -158,7 +158,7 @@
                             <li><a href="ProgressBar.html" style="color: white">ProgressBar</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://practice.automationtesting.in/">Practice Site</a></li>
+                    <li><a href="http://tymeshift.com/">Practice Site</a></li>
                 </ul>
             </div>
         </div>
@@ -185,7 +185,7 @@
                 <form id="basicBootstrapForm" ng-submit="createdata()" class="form-horizontal">
                     <div class="form-group">
                         <label class="col-md-3 col-xs-3 col-sm-3 control-label">Full Name* </label>
-                        <div class="col-md-4 col-xs-4 col-sm-4"><input type="text" data-test-id="firstname"  placeholder="First Name"
+                        <div class="col-md-4 col-xs-4 col-sm-4"><input type="text" data-id="firstname"  placeholder="First Name"
                                                                        class="form-control" ng-model="FirstName"
                                                                        required> </input></div>
                         <div class="col-md-4 col-xs-4 col-sm-4"><input type="text" data-test-id="lastname" placeholder="Last Name"
@@ -215,7 +215,7 @@
                         <div class="col-md-4 col-xs-4 col-sm-4"><label> <input type="radio" name="radiooptions"
                                                                                ng-model="radiovalue" value="Male"
                                                                                required> Male </input></label> <label>
-                            <input type="radio" name="radiooptions" ng-model="radiovalue" value="FeMale"> Female</input>
+                            <input type="radio" name="radiooptions" ng-model="radiovalue" value="Female"> Female</input>
                         </label></div>
                     </div>
                     <div class="form-group">
@@ -452,7 +452,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 col-xs-3 col-sm-3 control-label">Date Of Birth</label>
+                        <label class="col-md-3 col-xs-3 col-sm-3 control-label">Date Of Birth*</label>
                         <div class="col-md-3 col-xs-3 col-sm-3">
                             <select type="text" class="form-control" placeholder="Year" id="yearbox" ng-model="yearbox"
                                     ng-init="yearbox=''" required>
@@ -516,14 +516,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 col-xs-3 col-sm-3 control-label">Password</label>
+                        <label class="col-md-3 col-xs-3 col-sm-3 control-label">Password*</label>
                         <div class="col-md-4 col-xs-4 col-sm-4"><input id="firstpassword" type="password"
                                                                        class="form-control" ng-model="Password" required
                                                                        minlength="6"
                                                                        onblur="validatepattern(this)"> </input></div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 col-xs-3 col-sm-3 control-label">Confirm Password</label>
+                        <label class="col-md-3 col-xs-3 col-sm-3 control-label">Confirm Password*</label>
                         <div class="col-md-4 col-xs-4 col-sm-4">
                             <input id="secondpassword" type="password" class="form-control" ng-model="CPassword"
                                    required onblur="validatepasswords(this)"> </input>
@@ -550,7 +550,7 @@
                     </div>
                     <div class="form group">
                         <div class="col-md-9 col-md-offset-3 com-sm-9 col-sm-offset-3 col-xs-9 col-xs-offset-3 ">
-                            <button onclick="registersuccess()" id="submitbtn" type="submit" class="btn btn-primary" name="signup" value="sign up">
+                            <button id="submitbtn" type="submit" class="btn btn-primary" name="signup" value="sign up">
                                 Submit
                             </button>
                             <button id="Button1" type="button" class="btn btn-primary" value="Refresh">Refresh</button>
@@ -587,7 +587,7 @@
 <footer id="footer" class="midnight-blue col-md-12 col-xs-12 col-sm-12">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-xs-6 col-sm-6">"@ 2016"<a target="_blank" href="#" title="Sakinalium Demo Site">Automation
+            <div class="col-md-6 col-xs-6 col-sm-6">"@ 2021"<a target="_blank" href="#" title="Tymeshift QA practical test">Automation
                 Testing</a>"All Rights Reserved."
             </div>
             <div class="col-md-6 col-xs-6 col-sm-6 social pull-right">
@@ -616,12 +616,6 @@
     } );
 
 </script>
-
-<script>
-    function registersuccess ( ) {
-        alert('You have been registered');
-    }
-</script>>
 
 </body>
 <script>'undefined' === typeof _trfq || ( window._trfq = [] );

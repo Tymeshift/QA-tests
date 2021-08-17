@@ -1,8 +1,3 @@
-/**
- * Created by Sujith Alla on 3/30/2016.
- */
-
-
 var app=angular.module("Registerform",['ui.grid','ui.grid.edit','ngCookies','ui.grid.pagination']);
 
 
@@ -26,11 +21,11 @@ var FormCtrl=function ($scope,dataservice)
 
         var uniqueness=true;
 
-      $scope.myData=[{FirstName:$scope.FirstName,
+        $scope.myData=[{FirstName:$scope.FirstName,
             LastName:$scope.LastName,
             Email:$scope.EmailAdress,
-        Phone : $scope.Phone,
-        Gender:$scope.radiovalue}];
+            Phone : $scope.Phone,
+            Gender:$scope.radiovalue}];
 
         $scope.emaildata=[
             {
@@ -39,7 +34,7 @@ var FormCtrl=function ($scope,dataservice)
             }
         ]
 
-       userdetails=$scope.myData;
+        userdetails=$scope.myData;
         emaildetails=$scope.emaildata;
         existingdata=dataservice.rtrndata();
         existingdata.filter(function(el)
@@ -53,11 +48,11 @@ var FormCtrl=function ($scope,dataservice)
             {
                 $scope.EmailExists=true;
             }
-                if( el.Phone==$scope.Phone)
-                {
+            if( el.Phone==$scope.Phone)
+            {
 
-                    $scope.PhoneExists=true;
-                }
+                $scope.PhoneExists=true;
+            }
         })
 
         if (uniqueness)
@@ -95,7 +90,7 @@ var LoginCtrl=function($scope,dataservice)
                 var obj={
                     Email: response.data[i].Email,
                     Password:response.data[i].Password
-                                    }
+                }
                 newdata.push(obj);
 
             }
@@ -110,25 +105,25 @@ var LoginCtrl=function($scope,dataservice)
             if ((el.Email==$scope.Email)&&(el.Password==$scope.Password))
             {
                 window.location.href="Register.html"
-              redrct=true;
+                redrct=true;
             }
 
         })
 
         emailvalid=false;
 
-  if (!redrct)
-  {
-      if (emailvalid)
-      {
-          $scope.showerror=false;
-      }
-    else
-      {
-          $scope.showerror=true;
-      }
+        if (!redrct)
+        {
+            if (emailvalid)
+            {
+                $scope.showerror=false;
+            }
+            else
+            {
+                $scope.showerror=true;
+            }
 
-  }
+        }
 
     }
 }
@@ -146,7 +141,7 @@ var gridctrl=function ($scope,dataservice,$cookies,$interval)
     $scope.LastNamevalid=true;
     $scope.Phonevalid=true;
 
-  $scope.shows='true';
+    $scope.shows='true';
     $scope.stop=function(evt)
     {
         evt.stopImmediatePropagation();
@@ -156,15 +151,15 @@ var gridctrl=function ($scope,dataservice,$cookies,$interval)
     {
         $(evt.currentTarget.parentElement.parentElement).dblclick();
     }
-   $scope.Delete= function(row)
+    $scope.Delete= function(row)
     {
-       if (confirm("Delete the record permanently")==true)
-       {
-           var index=$scope.gridoptions.data.indexOf(row.entity);
-           $scope.gridoptions.data.splice(index,1)
-           dataservice.deletedata(row.entity.id);
-           $cookies.cmprsnt=false;
-       }
+        if (confirm("Delete the record permanently")==true)
+        {
+            var index=$scope.gridoptions.data.indexOf(row.entity);
+            $scope.gridoptions.data.splice(index,1)
+            dataservice.deletedata(row.entity.id);
+            $cookies.cmprsnt=false;
+        }
         $scope.Emailvalid=true;
         $scope.FirstNamevalid=true;
         $scope.Gendervalid=true;
@@ -180,44 +175,44 @@ var gridctrl=function ($scope,dataservice,$cookies,$interval)
         enableSorting: true,
 
 
-  columnDefs: [
-      {
-   field:"Email",
-          enableCellEdit: false,
-          enableSorting: true
+        columnDefs: [
+            {
+                field:"Email",
+                enableCellEdit: false,
+                enableSorting: true
 
-      },
-      {
-          field:"FirstName",
-          enableCellEdit: false
-      },
-      {
-          field:"Gender",
-          enableCellEdit: false
-      },
-      {
-          field:"LastName",
-          enableCellEdit: false
-      },
-      {
-          field:"Phone",
-          enableCellEdit: false
-      },
-      {
-          field:"id",
-          visible:false
-      },
-      {
-          field:"Action",
-          enableCellEdit: false,
-          cellTemplate: ' <user-click-select> <div class="avddbl" style="margin:7px" ng-dblclick="grid.appScope.stop($event)" ><button style="padding:2px 7px;background-color:#4caeea" class="btn btn-xs btn-custom" ng-dblclick="grid.appScope.start($event)"><i  class="fa fa-pencil" style="color:black;font-size:14px"></i></button> <del-click><button style="padding:2px 7px" class="btn btn-danger btn-xs" >' +
-          '<i style="font-size:14px" class="fa fa-trash-o ">' + '</i></button></del-click> <div  class="contextshw" style="display:none;color: bisque; background-color: crimson; border-radius: 6px; padding: 3px;"> <ul style="margin-left: -37px"><li ng-click="grid.appScope.Delete(row)"><button style="padding:5px 12px" class="btn btn-danger btn-xs">Delete</button></li> <li><button style="padding:5px 12px;background-color:#4caeea"" class="btn btn-xs btn-custom">Cancel</button></li> </ul></div></div>' +
-          '<div class="avddbl" ng-dblclick="grid.appScope.stop($event)" style="display:none;margin-left: 3px" data-ids="{{row.entity.id}}"> <save-click><button  type="button"  class="btn btn-primary">Save</button> </save-click>' +
-          ' <cancel-click><button  type="button" class="btn btn-danger">Cancel</button></cancel-click></div>' +
-          '   </user-click-select>'
-      }
+            },
+            {
+                field:"FirstName",
+                enableCellEdit: false
+            },
+            {
+                field:"Gender",
+                enableCellEdit: false
+            },
+            {
+                field:"LastName",
+                enableCellEdit: false
+            },
+            {
+                field:"Phone",
+                enableCellEdit: false
+            },
+            {
+                field:"id",
+                visible:false
+            },
+            {
+                field:"Action",
+                enableCellEdit: false,
+                cellTemplate: ' <user-click-select> <div class="avddbl" style="margin:7px" ng-dblclick="grid.appScope.stop($event)" ><button style="padding:2px 7px;background-color:#4caeea" class="btn btn-xs btn-custom" ng-dblclick="grid.appScope.start($event)"><i  class="fa fa-pencil" style="color:black;font-size:14px"></i></button> <del-click><button style="padding:2px 7px" class="btn btn-danger btn-xs" >' +
+                    '<i style="font-size:14px" class="fa fa-trash-o ">' + '</i></button></del-click> <div  class="contextshw" style="display:none;color: bisque; background-color: crimson; border-radius: 6px; padding: 3px;"> <ul style="margin-left: -37px"><li ng-click="grid.appScope.Delete(row)"><button style="padding:5px 12px" class="btn btn-danger btn-xs">Delete</button></li> <li><button style="padding:5px 12px;background-color:#4caeea"" class="btn btn-xs btn-custom">Cancel</button></li> </ul></div></div>' +
+                    '<div class="avddbl" ng-dblclick="grid.appScope.stop($event)" style="display:none;margin-left: 3px" data-ids="{{row.entity.id}}"> <save-click><button  type="button"  class="btn btn-primary">Save</button> </save-click>' +
+                    ' <cancel-click><button  type="button" class="btn btn-danger">Cancel</button></cancel-click></div>' +
+                    '   </user-click-select>'
+            }
 
-  ]
+        ]
 
 
     }
@@ -226,20 +221,20 @@ var gridctrl=function ($scope,dataservice,$cookies,$interval)
         function(response)
         {
             var newdata=[] ;
-             for (var i=0; i<response.data.length;i++)
-             {
-                 var obj={
-                     Email: response.data[i].Email,
-                     FirstName: response.data[i].FirstName,
-                     Gender: response.data[i].Gender,
-                     LastName:response.data[i].LastName,
-                     Phone:response.data[i].Phone,
-                     id:response.data[i]._id.$oid
-                     //id:response.data[i]._id.$oid
-                            }
-                 newdata.push(obj);
+            for (var i=0; i<response.data.length;i++)
+            {
+                var obj={
+                    Email: response.data[i].Email,
+                    FirstName: response.data[i].FirstName,
+                    Gender: response.data[i].Gender,
+                    LastName:response.data[i].LastName,
+                    Phone:response.data[i].Phone,
+                    id:response.data[i]._id.$oid
+                    //id:response.data[i]._id.$oid
+                }
+                newdata.push(obj);
 
-             }
+            }
             $scope.gridoptions.data=newdata;
 
         }
@@ -465,7 +460,7 @@ function dataservice($http,$q,$interval) {
     {
         return getemail().then(function(response)
         {
-           emaildata=[];
+            emaildata=[];
             for (var i = 0; i < response.data.length; i++) {
                 var obj = {
                     Email: response.data[i].Email,
@@ -499,7 +494,7 @@ app.directive('userClickSelect', function()
             {
                 for (var i=0;i<parentdivs.length; i++)
                 {
-                   $(parentdivs[i].firstChild).addClass('ui-grid-cell-contents-hidden');
+                    $(parentdivs[i].firstChild).addClass('ui-grid-cell-contents-hidden');
                     var inputtxt='<div> <input style="background-color:white;height:32px" type="text" value="'  + parentdivs[i].firstChild.innerText  + '"> </div>';
                     $(parentdivs[i]).append(inputtxt);
                     $(parentdivs[i]).css("background-color","white");
@@ -551,82 +546,82 @@ app.directive('userClickSelect', function()
 
 app.directive('delClick', function($cookies)
 {
-return {
-    restrict:"E",
-    link : function(scope,el,attrs)
-    {
-
-        el.on('click', function(evt)
+    return {
+        restrict:"E",
+        link : function(scope,el,attrs)
         {
-          evt.stopPropagation();
-        })
 
-        el.on('contextmenu',function(evt)
-        {
-            evt.preventDefault();
-            evt.stopPropagation();
-            var divs;
-            if (!$cookies.cmprsnt)
+            el.on('click', function(evt)
             {
-
-                this.parentElement.children[2].style.display="";
-                $cookies.cmprsnt=true;
-
-            }
-            else
-            {
-                $(document).click();
-            }
-
-
-
-            $(document).click(function()
-            {
-                if ($cookies.cmprsnt)
-                {
-                    $('.contextshw').css('display','none');
-                    $cookies.cmprsnt=false;
-                }
-
-
-            })
-
-            $(document).on('contextmenu',function()
-            {
-                if ($cookies.cmprsnt)
-                {
-                    $('.contextshw').css('display','none');
-                    $cookies.cmprsnt=false;
-                }
-
-
-            })
-
-            $('.contextshw').on('click',function(evt)
-            {
-                evt.preventDefault();
                 evt.stopPropagation();
             })
 
-            $('.contextshw>ul>li').on('click',function(evt)
+            el.on('contextmenu',function(evt)
             {
                 evt.preventDefault();
                 evt.stopPropagation();
-                if (this.innerText=='Cancel')
+                var divs;
+                if (!$cookies.cmprsnt)
                 {
-                    $('.contextshw').css('display','none');
+
+                    this.parentElement.children[2].style.display="";
+                    $cookies.cmprsnt=true;
+
                 }
-                else {
+                else
+                {
+                    $(document).click();
+                }
 
-                     }
+
+
+                $(document).click(function()
+                {
+                    if ($cookies.cmprsnt)
+                    {
+                        $('.contextshw').css('display','none');
+                        $cookies.cmprsnt=false;
+                    }
+
+
+                })
+
+                $(document).on('contextmenu',function()
+                {
+                    if ($cookies.cmprsnt)
+                    {
+                        $('.contextshw').css('display','none');
+                        $cookies.cmprsnt=false;
+                    }
+
+
+                })
+
+                $('.contextshw').on('click',function(evt)
+                {
+                    evt.preventDefault();
+                    evt.stopPropagation();
+                })
+
+                $('.contextshw>ul>li').on('click',function(evt)
+                {
+                    evt.preventDefault();
+                    evt.stopPropagation();
+                    if (this.innerText=='Cancel')
+                    {
+                        $('.contextshw').css('display','none');
+                    }
+                    else {
+
+                    }
+                })
+                {
+
+                }
+
             })
-            {
-
-            }
-
-        })
+        }
     }
-}
 })
 
 app.directive('saveClick', function(dataservice)
@@ -641,21 +636,21 @@ app.directive('saveClick', function(dataservice)
 
                 var emlid=presentemail[0].id;
                 var updobj = {
-                        Email: thisdivs[4].firstChild.innerText.trim(),
-                        FirstName: thisdivs[3].firstChild.innerText.trim(),
-                        Gender: thisdivs[2].firstChild.innerText.trim(),
-                        LastName: thisdivs[1].firstChild.innerText.trim(),
-                        Phone: thisdivs[0].firstChild.innerText.trim()
+                    Email: thisdivs[4].firstChild.innerText.trim(),
+                    FirstName: thisdivs[3].firstChild.innerText.trim(),
+                    Gender: thisdivs[2].firstChild.innerText.trim(),
+                    LastName: thisdivs[1].firstChild.innerText.trim(),
+                    Phone: thisdivs[0].firstChild.innerText.trim()
 
-                    };
+                };
 
                 var updeml=
-                {
-                    Email:thisdivs[4].firstChild.innerText.trim(),
-                    Passowrd:presentemail[0].Passowrd
-                }
+                    {
+                        Email:thisdivs[4].firstChild.innerText.trim(),
+                        Passowrd:presentemail[0].Passowrd
+                    }
 
-                    dataservice.updatedata(updobj, objid).then(dataservice.updateemail(updeml,emlid));
+                dataservice.updatedata(updobj, objid).then(dataservice.updateemail(updeml,emlid));
 
             }
         },
@@ -679,34 +674,34 @@ app.directive('saveClick', function(dataservice)
                 var presentemail=emaildata.filter(function(el)
                 {
 
-                   return el.Email==thisdivs[4].firstChild.innerText.trim();
+                    return el.Email==thisdivs[4].firstChild.innerText.trim();
 
                 });
 
 
-            $(this.parentElement.parentElement.parentElement).css("background-color","");
+                $(this.parentElement.parentElement.parentElement).css("background-color","");
 
                 if ((thisdivs[3].children[1].firstElementChild.value.trim()==undefined || thisdivs[3].children[1].firstElementChild.value.trim()===""))
                 {
                     scope.$root.$$childTail.FirstNamevalid=false;
                 }
 
-                    if    (thisdivs[1].children[1].firstElementChild.value.trim()==undefined || thisdivs[1].children[1].firstElementChild.value.trim()==="")
-                    {
-                        scope.$root.$$childTail.LastNamevalid=false;
-                    }
-                        if  (!(thisdivs[2].children[1].firstElementChild.value.trim().toUpperCase()=="MALE" || thisdivs[2].children[1].firstElementChild.value.trim().toUpperCase()=="FEMALE"))
-                        {
-                            scope.$root.$$childTail.Gendervalid=false;
-                        }
-                        if   (!(thisdivs[0].children[1].firstElementChild.value.trim().length==10 && !isNaN(thisdivs[0].children[1].firstElementChild.value.trim())))
-                        {
-                            scope.$root.$$childTail.Phonevalid=false;
-                        }
-                        if ( !(pattern.test(thisdivs[4].children[1].firstElementChild.value.trim())))
-                        {
-                            scope.$root.$$childTail.Emailvalid=false;
-                        }
+                if    (thisdivs[1].children[1].firstElementChild.value.trim()==undefined || thisdivs[1].children[1].firstElementChild.value.trim()==="")
+                {
+                    scope.$root.$$childTail.LastNamevalid=false;
+                }
+                if  (!(thisdivs[2].children[1].firstElementChild.value.trim().toUpperCase()=="MALE" || thisdivs[2].children[1].firstElementChild.value.trim().toUpperCase()=="FEMALE"))
+                {
+                    scope.$root.$$childTail.Gendervalid=false;
+                }
+                if   (!(thisdivs[0].children[1].firstElementChild.value.trim().length==10 && !isNaN(thisdivs[0].children[1].firstElementChild.value.trim())))
+                {
+                    scope.$root.$$childTail.Phonevalid=false;
+                }
+                if ( !(pattern.test(thisdivs[4].children[1].firstElementChild.value.trim())))
+                {
+                    scope.$root.$$childTail.Emailvalid=false;
+                }
 
 
 
@@ -722,7 +717,7 @@ app.directive('saveClick', function(dataservice)
                     allowupdate=false;
                 }
 
-                    existingdata.filter(function(el)
+                existingdata.filter(function(el)
                 {
                     if ((el.Email.trim()==thisdivs[4].children[1].firstElementChild.value.trim() || el.Phone.trim()==thisdivs[0].children[1].firstElementChild.value.trim()) && (!(objid==el.id)))
                     {
@@ -822,19 +817,19 @@ app.directive('multiSelect',function()
                 {
 
 
-                 $scope.languageslist=data;
-                $scope.menucontainer=$('<div ></div>');
+                    $scope.languageslist=data;
+                    $scope.menucontainer=$('<div ></div>');
                     $scope.menucontainer.css('display','none');
                     $scope.menu=$('<ul style="list-style:none;max-height: 230px;overflow: scroll;" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"> </ul>');
-                 $scope.menucontainer.append($scope.menu[0]);
-                  //  var cdd= $('#Languages');
+                    $scope.menucontainer.append($scope.menu[0]);
+                    //  var cdd= $('#Languages');
                     for  ( var i=0; i< data.length;i++)
                     {
                         var Language= data[i].name;
-                       var newelem=$compile( '<li list-select > <a  style="text-decoration:none" class="ui-corner-all">' + Language + '</a> </li> ' )($scope);
+                        var newelem=$compile( '<li list-select > <a  style="text-decoration:none" class="ui-corner-all">' + Language + '</a> </li> ' )($scope);
 
-                       // $scope.menu.append($("<li list-select > <a style='text-decoration:none' class='ui-corner-all'>" + Language + "</a></li>").attr("value",Language)[0]);
-          $scope.menu.append(newelem);
+                        // $scope.menu.append($("<li list-select > <a style='text-decoration:none' class='ui-corner-all'>" + Language + "</a></li>").attr("value",Language)[0]);
+                        $scope.menu.append(newelem);
 
                     }
 
@@ -850,19 +845,19 @@ app.directive('multiSelect',function()
         {
 
 
-                scope.getdata();
-                setTimeout(function()
-                {
-                    el.append(scope.menucontainer[0]);
+            scope.getdata();
+            setTimeout(function()
+            {
+                el.append(scope.menucontainer[0]);
 
-                },500);
-                 el.on('click',function(evt)
-                 {
-                     evt.stopPropagation();
-                     var self=this;
+            },500);
+            el.on('click',function(evt)
+            {
+                evt.stopPropagation();
+                var self=this;
 
-                     this.children[1].style.display="block";
-                 })
+                this.children[1].style.display="block";
+            })
 
         }
     }
@@ -870,53 +865,53 @@ app.directive('multiSelect',function()
 })
 
 app.directive('listSelect', function () {
-   return{
-       restrict:"A",
-       scope : false,
-       link : function(scope,el,attr)
-       {
+    return{
+        restrict:"A",
+        scope : false,
+        link : function(scope,el,attr)
+        {
 
-           el.hover(function()
-          {
-            el.addClass('ui-elemfocus');
-          }, function()
-          {
-              el.removeClass('ui-elemfocus')
-          }
-          )
-           el.on('click',function()
-           {
+            el.hover(function()
+                {
+                    el.addClass('ui-elemfocus');
+                }, function()
+                {
+                    el.removeClass('ui-elemfocus')
+                }
+            )
+            el.on('click',function()
+            {
 
-               $("#msdd").append( $("<div ></div>")
-                   .addClass("ui-autocomplete-multiselect-item")
-                   .text(this.innerText).click(function(evt)
-                   {
-                       evt.stopPropagation();
-                   }).append($("<span style='display: inline-block;'></span>").addClass("ui-icon ui-icon-close").css('cursor','pointer')
-                       .click(function(evt)
-                       {
-                           evt.stopPropagation();
-                           var nde=this.parentElement.innerText;
+                $("#msdd").append( $("<div ></div>")
+                    .addClass("ui-autocomplete-multiselect-item")
+                    .text(this.innerText).click(function(evt)
+                    {
+                        evt.stopPropagation();
+                    }).append($("<span style='display: inline-block;'></span>").addClass("ui-icon ui-icon-close").css('cursor','pointer')
+                        .click(function(evt)
+                        {
+                            evt.stopPropagation();
+                            var nde=this.parentElement.innerText;
 
 
-                           var newelem=$("ul.ui-corner-all > li").filter(function(index)
-                           {
-                               if (this.innerText.trim()==nde)
-                               {
+                            var newelem=$("ul.ui-corner-all > li").filter(function(index)
+                            {
+                                if (this.innerText.trim()==nde)
+                                {
                                     this.style.display="";
-                               }
+                                }
 
-                           })
-                           this.parentElement.parentElement.nextElementSibling.children[0];
-                    $(this.parentElement).remove();
+                            })
+                            this.parentElement.parentElement.nextElementSibling.children[0];
+                            $(this.parentElement).remove();
 
-                       })));
-               this.style.display="none";
+                        })));
+                this.style.display="none";
 
-           })
+            })
 
-       }
-   }
+        }
+    }
 })
 
 

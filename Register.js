@@ -1,14 +1,10 @@
-/**
- * Created by Sujith Alla on 4/22/2016.
- */
-
 $(document).ready(function()
 
 {
 
     $("#secondpassword").keypress(function(evt)
     {
-        if (evt.keyCode==13)
+        if (evt.keyCode===13)
         {
 
             var password1= document.getElementById("firstpassword").value;
@@ -37,10 +33,10 @@ $(document).ready(function()
     })
     $(document).on('click',function()
     {
-     if ($("ul.ui-corner-all")[0])
-     {
-         $("ul.ui-corner-all")[0].parentElement.style.display="none";
-     }
+        if ($("ul.ui-corner-all")[0])
+        {
+            $("ul.ui-corner-all")[0].parentElement.style.display="none";
+        }
 
     })
 
@@ -50,11 +46,11 @@ $(document).ready(function()
     $.getJSON('https://restcountries.eu/rest/v1/all').success(function(data)
     {
 
-      var cdd= $('#countries');
+        var cdd= $('#countries');
         for  ( var i=0; i< data.length;i++)
         {
             var countryname= data[i].name;
-        cdd.append($("<option></option>").attr("value",countryname).text(countryname));
+            cdd.append($("<option></option>").attr("value",countryname).text(countryname));
         }
 
     });
@@ -76,7 +72,7 @@ $(document).ready(function()
     }).error(function(err)
     {
 
-       // console.log(JSON.stringify(err));
+        // console.log(JSON.stringify(err));
     });
 
     $.getJSON('Skills.json').success(function(data)

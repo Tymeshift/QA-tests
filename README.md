@@ -72,3 +72,26 @@ To be done:
  3. Fix image upload
  4. Create issues
  5. Create a document with practical assessment information for the candidate
+
+Test cases:
+1. Logo icon: Check redirection link and upload of image
+2. Navigation: Check redirection links
+ 3. Registration form
+  3. First name: Check regular expression + is field required
+  3. Last name: Check regular expression + is field required
+  3. Address: Check regular expression + is field required + expanding
+  3. Email address: Check regular expression + is field required
+  3. Phone: Check regular expression + is field required
+  3. Gender: Check clickabilty + availability
+  3. Hobbies: Check regular expression + is field required
+  3. Languages: Check regular expression + is field required
+  3. Skills: Check regular expression + is field required
+  3. Country: Check regular expression + is field required
+  3. Select Country: Check regular expression + is field required + input in the search bar
+  3. Date of birth: Check regular expression + is field required + selection
+  3. Password: Check regular expression + is field required
+  3. Confirm password: Check regular expression + is field required
+  3. Submit: Displays popup: Check clickability + ability to submit form
+  3. Refresh: Check clickability + functionality of reset
+ 4. Footer
+  4. Social media links: Check redirection links

@@ -9,6 +9,8 @@ Through your testing process, make sure that you have documented every test case
 
 You are not limited with tools that you should use for developing your solution, so feel free to make your own pick on toolset for documenting Test cases and Bugs/Issues and framework for developing Automated tests.
 
+
+URL to Registration form can be found [here](https://deploy-preview-2--stupefied-kare-608721.netlify.app/?utm_source=github&utm_campaign=bot_dp).
 Requirements for the Registration form can be found [here](https://tymeshift.slite.com/app/channels/user-Gzp8y_503p/notes/AvoXA~Vyt).
 
 ## Rules

@@ -13,9 +13,7 @@ Requirements for the Registration form can be found [here](https://tymeshift.sli
 
 ## Rules
 
-* Solution must have documented Test cases and Bugs/Issues
-* Testing should cover Happy and Unhappy paths
-* Automated tests code must have commented lines of code which will serve us a guide through your code for easier understanding of your solution
+* Is it a clean solution that is easy to follow, respects all the specs and the design
 * You can upload your solution to GitHub or send us a ZIP file with the solution at hiring@tymeshift.com
 * We tried to create a task with a small scope but take all the time you need to feel comfortable with your solution and do it at your own pace
 

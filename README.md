@@ -65,13 +65,6 @@ Functionality description:
   3. Upload photo: Uploads new image
  4. Footer
   4. Social media links: Redirects to the social medias urls
-  
-To be done:
- 1. Add iframe on elements
- 2. Add popup on submit button click with "Success registration" message
- 3. Fix image upload
- 4. Create issues
- 5. Create a document with practical assessment information for the candidate
 
 Test cases:
 1. Logo icon: Check redirection link and upload of image

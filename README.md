@@ -7,7 +7,7 @@ Registration form is probably one of the most common pages on every website. You
 
 The app is accessible [here](https://deploy-preview-2--stupefied-kare-608721.netlify.app/?utm_source=github&utm_campaign=bot_dp).
 
-### Requirements
+## Requirements
 
 #### Header
 
